@@ -1,0 +1,493 @@
+/*
+  Адаптивные стили. Подход Mobile First:
+  сначала пишем стили для телефона,
+  потом через min-width добавляем правила для больших экранов.
+
+  Точки перелома:
+  576px  — большой телефон
+  768px  — планшет
+  1024px — небольшой компьютер
+  1440px — широкий экран
+*/
+
+/* ===== Общие правила ===== */
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  display: block;
+}
+
+/* при переходе по якорю блок не прячется под липкой шапкой */
+html {
+  scroll-padding-top: 90px;
+}
+
+/* длинные слова и адреса не вылезают за экран */
+body {
+  overflow-wrap: break-word;
+}
+
+/* ===== Мобильная версия (по умолчанию) ===== */
+
+/* Шапка и меню */
+.header__inner {
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+
+.header__logo {
+  font-size: 24px;
+}
+
+.nav {
+  display: none;
+  width: 100%;
+}
+
+/* класс добавляется скриптом при нажатии на кнопку «Меню» */
+.nav--open {
+  display: block;
+}
+
+.nav__list {
+  flex-direction: column;
+  gap: 0;
+  padding-top: 12px;
+}
+
+.nav__link {
+  display: block;
+  padding: 12px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Hero */
+.hero {
+  padding: 24px 0;
+}
+
+.hero__title {
+  margin-top: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.hero__inner {
+  gap: 24px;
+}
+
+.hero .button {
+  display: block;
+}
+
+/* Сетки — одна колонка */
+.advantages,
+.products,
+.catalog,
+.product {
+  grid-template-columns: 1fr;
+}
+
+/* Фильтр каталога — над товарами, категории в виде «таблеток» */
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter__link {
+  padding: 8px 14px;
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.filter__group {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+.filter__group legend {
+  width: 100%;
+}
+
+.filter__option {
+  padding: 4px 0;
+}
+
+.filter .button {
+  width: 100%;
+}
+
+/* Страница товара */
+.product__price {
+  font-size: 26px;
+}
+
+.product__buttons {
+  flex-direction: column;
+}
+
+/* Таблицы: широкая таблица прокручивается внутри своего блока, а не вся страница */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table__caption {
+  font-size: 20px;
+}
+
+/* Таблица сравнения на телефоне показывается карточками */
+.compare-table thead {
+  display: none;
+}
+
+.compare-table,
+.compare-table tbody,
+.compare-table tr,
+.compare-table td {
+  display: block;
+}
+
+.compare-table {
+  background-color: transparent;
+}
+
+.compare-table tr {
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-white);
+}
+
+/* первая строка карточки — название сорта */
+.compare-table td:first-child {
+  background-color: var(--color-light);
+}
+
+.compare-table td {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  text-align: right;
+}
+
+.compare-table td:last-child {
+  border-bottom: none;
+}
+
+/* подпись столбца берём из атрибута data-label */
+.compare-table td::before {
+  content: attr(data-label);
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Формы */
+.form {
+  max-width: 100%;
+  padding: 16px;
+}
+
+.form__input {
+  min-height: 44px;
+}
+
+.form__checkbox input {
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  flex-shrink: 0;
+}
+
+.form .button {
+  width: 100%;
+}
+
+/* Контакты */
+.contacts-page {
+  display: grid;
+  gap: 24px;
+}
+
+.contacts-page h2 {
+  margin-top: 0;
+}
+
+.contacts {
+  padding: 16px;
+}
+
+/* Модальное окно не шире экрана */
+.modal__window {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 16px;
+  padding: 24px;
+}
+
+/* Подвал (снизу место под кнопку «Наверх», чтобы она не закрывала ссылки) */
+.footer {
+  padding-bottom: 72px;
+}
+
+.footer__inner {
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.footer__nav {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.to-top {
+  right: 12px;
+  bottom: 12px;
+}
+
+/* ===== Большой телефон: от 576px ===== */
+
+@media (min-width: 576px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero .button {
+    display: inline-block;
+  }
+
+  .product__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form {
+    padding: 32px;
+  }
+
+  .form .button {
+    width: auto;
+  }
+
+  /* таблица сравнения снова становится обычной таблицей */
+  .compare-table {
+    display: table;
+    min-width: 600px;
+    background-color: var(--color-white);
+  }
+
+  .compare-table thead {
+    display: table-header-group;
+  }
+
+  .compare-table tbody {
+    display: table-row-group;
+  }
+
+  .compare-table tr {
+    display: table-row;
+  }
+
+  .compare-table td {
+    display: table-cell;
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+
+  .compare-table td:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .compare-table td::before {
+    content: none;
+  }
+}
+
+/* ===== Планшет: от 768px ===== */
+
+@media (min-width: 768px) {
+  /* меню в строку, кнопка «Меню» не нужна */
+  .burger {
+    display: none;
+  }
+
+  .header__inner {
+    padding: 16px 0;
+  }
+
+  .header__logo {
+    font-size: 26px;
+  }
+
+  .nav {
+    display: block;
+    width: auto;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  .nav__link {
+    padding: 4px 0;
+    border-top: none;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .hero__title {
+    font-size: 34px;
+  }
+
+  .advantages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* фильтр становится боковой колонкой */
+  .catalog {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .filter {
+    position: sticky;
+    top: 90px;
+  }
+
+  .filter__list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .filter__link {
+    padding: 8px 0;
+    border: none;
+    border-radius: 0;
+    text-decoration: underline;
+  }
+
+  .filter__group {
+    display: block;
+  }
+
+  .filter__option {
+    display: block;
+  }
+
+  .product {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  /* форма заявки в две колонки */
+  .form--order {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    max-width: 700px;
+  }
+
+  .form__field--wide,
+  .form--order .form__checkbox,
+  .form--order .button {
+    grid-column: 1 / -1;
+  }
+
+  .form--order .button {
+    justify-self: start;
+  }
+
+  .contacts-page {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 32px;
+  }
+
+  .contacts {
+    padding: 16px 32px;
+  }
+
+  .modal__window {
+    padding: 32px;
+  }
+
+  .footer {
+    padding-bottom: 16px;
+  }
+
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 60px;
+    text-align: left;
+  }
+
+  .to-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+/* ===== Небольшой компьютер: от 1024px ===== */
+
+@media (min-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .catalog {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .nav__list {
+    gap: 24px;
+  }
+
+  .hero {
+    padding: 56px 0;
+  }
+
+  .hero__title {
+    font-size: 40px;
+  }
+
+  .product__price {
+    font-size: 30px;
+  }
+}
+
+/* ===== Широкий экран: от 1440px ===== */
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1240px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__text {
+    font-size: 20px;
+  }
+}

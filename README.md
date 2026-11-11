@@ -32,7 +32,10 @@ kr3-responsive-shop/
 │   └── main.js
 ├── images/
 ├── lighthouse/
-│   └── accessibility-report.png
+│   ├── accessibility-report.png
+│   ├── accessibility-index.html
+│   ├── accessibility-catalog.html
+│   └── accessibility-order.html
 ├── README.md
 └── .gitignore
 ```
@@ -99,9 +102,22 @@ kr3-responsive-shop/
 
 ## Lighthouse
 
-Проверены страницы `index.html`, `catalog.html` и `order.html`, категория Accessibility.
+Проверка делалась в Lighthouse 12, режим Mobile, категория Accessibility.
 
-Отчёт сохранён в папке `lighthouse/`.
+| Страница | Accessibility |
+|---|---|
+| `index.html` | 100 |
+| `catalog.html` | 100 |
+| `order.html` | 100 |
+| `product.html` | 100 |
+| `contacts.html` | 100 |
+
+Отчёты сохранены в папке `lighthouse/`:
+
+- `accessibility-report.png` — скриншот результатов для `index.html`, `catalog.html` и `order.html`;
+- `accessibility-index.html`, `accessibility-catalog.html`, `accessibility-order.html` — полные отчёты, их можно открыть в браузере.
+
+Lighthouse проверяет не всё (например, удобство работы с клавиатуры и понятность текста он сам не оценит), поэтому меню, модальное окно, skip-link и порядок фокуса я дополнительно проверил вручную клавишей Tab.
 
 ## Проверенные ширины
 

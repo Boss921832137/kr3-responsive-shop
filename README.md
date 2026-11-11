@@ -102,7 +102,7 @@ kr3-responsive-shop/
 
 ## Lighthouse
 
-Проверка делалась в Lighthouse 12, режим Mobile, категория Accessibility.
+Проверка делалась на опубликованной версии сайта (GitHub Pages) в Lighthouse 12, режим Mobile, категория Accessibility.
 
 | Страница | Accessibility |
 |---|---|

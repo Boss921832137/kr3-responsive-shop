@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Медная турка">
+  <rect width="400" height="300" fill="#f5ebdf"/>
+  <ellipse cx="170" cy="252" rx="90" ry="12" fill="#e5d6c6"/>
+  <path d="M120 110 H220 L240 245 H100 Z" fill="#c26b32"/>
+  <path d="M112 100 H228 L220 115 H120 Z" fill="#a8551f"/>
+  <rect x="112" y="150" width="120" height="10" fill="#a8551f"/>
+  <rect x="222" y="118" width="40" height="12" fill="#a8551f" transform="rotate(-25 222 118)"/>
+  <rect x="255" y="70" width="110" height="18" rx="9" fill="#6b4329" transform="rotate(-25 255 88)"/>
+</svg>

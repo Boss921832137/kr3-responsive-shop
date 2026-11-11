@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Чашка кофе на блюдце">
+  <rect width="600" height="420" fill="#e9d5bf"/>
+  <circle cx="480" cy="80" r="120" fill="#f5ebdf"/>
+  <path d="M260 70 C240 100 280 120 260 150" fill="none" stroke="#fffaf4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M300 60 C280 95 320 115 300 150" fill="none" stroke="#fffaf4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M340 70 C320 100 360 120 340 150" fill="none" stroke="#fffaf4" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="300" cy="330" rx="200" ry="34" fill="#fffaf4"/>
+  <ellipse cx="300" cy="326" rx="150" ry="20" fill="#e5d6c6"/>
+  <path d="M190 180 H410 L390 300 C385 320 215 320 210 300 Z" fill="#ffffff"/>
+  <ellipse cx="300" cy="182" rx="110" ry="18" fill="#55311a"/>
+  <ellipse cx="300" cy="182" rx="70" ry="9" fill="#7a4a2a"/>
+  <path d="M405 210 C470 210 470 280 395 280" fill="none" stroke="#ffffff" stroke-width="18"/>
+  <ellipse cx="110" cy="360" rx="18" ry="12" fill="#55311a" transform="rotate(-30 110 360)"/>
+  <ellipse cx="140" cy="380" rx="18" ry="12" fill="#7a4a2a" transform="rotate(20 140 380)"/>
+  <ellipse cx="500" cy="370" rx="18" ry="12" fill="#55311a" transform="rotate(25 500 370)"/>
+</svg>

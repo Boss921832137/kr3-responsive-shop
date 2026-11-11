@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Воронка для заваривания">
+  <rect width="400" height="300" fill="#f5ebdf"/>
+  <ellipse cx="200" cy="262" rx="100" ry="12" fill="#e5d6c6"/>
+  <path d="M130 60 H270 L225 140 H175 Z" fill="#ffffff" stroke="#d6c4b2" stroke-width="4"/>
+  <path d="M150 70 H250 L218 128 H182 Z" fill="#55311a"/>
+  <rect x="160" y="138" width="80" height="10" rx="4" fill="#ffffff" stroke="#d6c4b2" stroke-width="3"/>
+  <path d="M155 150 H245 L235 255 H165 Z" fill="#ffffff" stroke="#d6c4b2" stroke-width="4"/>
+  <path d="M162 200 H238 L234 250 H166 Z" fill="#7a4a2a"/>
+  <path d="M245 175 C280 175 280 225 240 225" fill="none" stroke="#d6c4b2" stroke-width="10"/>
+</svg>

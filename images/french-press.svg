@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Френч-пресс">
+  <rect width="400" height="300" fill="#f5ebdf"/>
+  <ellipse cx="200" cy="262" rx="100" ry="12" fill="#e5d6c6"/>
+  <rect x="195" y="30" width="10" height="40" fill="#555"/>
+  <circle cx="200" cy="28" r="10" fill="#3b2416"/>
+  <rect x="148" y="66" width="104" height="14" rx="4" fill="#777"/>
+  <rect x="152" y="80" width="96" height="172" rx="6" fill="#d8ecf2" stroke="#8a8a8a" stroke-width="4"/>
+  <rect x="156" y="130" width="88" height="118" rx="4" fill="#55311a"/>
+  <rect x="156" y="124" width="88" height="10" fill="#c9a37a"/>
+  <path d="M248 100 C300 100 300 220 248 220" fill="none" stroke="#3b2416" stroke-width="14"/>
+  <rect x="146" y="248" width="108" height="10" rx="4" fill="#777"/>
+</svg>

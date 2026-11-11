@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интернет-магазин кофе Зерно.">
+  <title>Зерно — магазин кофе</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html">Зерно</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link nav__link--active" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link" href="product.html">Товар</a></li>
+          <li><a class="nav__link" href="order.html">Заявка</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <h1 class="hero__title">Свежий кофе с доставкой</h1>
+          <p class="hero__text">Продаём кофе в зёрнах и всё, что нужно для его заваривания.</p>
+          <a class="button" href="catalog.html">Перейти в каталог</a>
+        </div>
+        <img class="hero__image" src="images/hero.svg" alt="Чашка кофе">
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <div class="container">
+        <h2 class="section__title">Преимущества</h2>
+        <div class="advantages">
+          <div class="advantages__item">
+            <h3>Свежая обжарка</h3>
+            <p>Обжариваем кофе каждую неделю.</p>
+          </div>
+          <div class="advantages__item">
+            <h3>Быстрая доставка</h3>
+            <p>Привезём заказ на следующий день.</p>
+          </div>
+          <div class="advantages__item">
+            <h3>Бесплатный помол</h3>
+            <p>Смелем кофе под ваш способ заваривания.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="popular">
+      <div class="container">
+        <h2 class="section__title">Популярные товары</h2>
+        <div class="products">
+          <article class="product-card">
+            <span class="product-card__badge">Хит</span>
+            <img class="product-card__image" src="images/coffee-ethiopia.svg" alt="Кофе Эфиопия">
+            <h3 class="product-card__title">Эфиопия</h3>
+            <p class="product-card__text">Кофе в зёрнах, 250 г.</p>
+            <p class="product-card__price">890 ₽</p>
+            <a class="button" href="product.html">Подробнее</a>
+          </article>
+          <article class="product-card">
+            <span class="product-card__badge product-card__badge--sale">Скидка</span>
+            <img class="product-card__image" src="images/coffee-brazil.svg" alt="Кофе Бразилия">
+            <h3 class="product-card__title">Бразилия</h3>
+            <p class="product-card__text">Кофе в зёрнах, 250 г.</p>
+            <p class="product-card__price">690 ₽</p>
+            <a class="button" href="product.html">Подробнее</a>
+          </article>
+          <article class="product-card">
+            <span class="product-card__badge product-card__badge--new">Новинка</span>
+            <img class="product-card__image" src="images/french-press.svg" alt="Френч-пресс">
+            <h3 class="product-card__title">Френч-пресс</h3>
+            <p class="product-card__text">Объём 600 мл.</p>
+            <p class="product-card__price">1 490 ₽</p>
+            <a class="button" href="product.html">Подробнее</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <p>© 2026 Зерно. Телефон: +7 (495) 000-00-00</p>
+      <nav class="footer__nav">
+        <a class="footer__link" href="index.html#advantages">Преимущества</a>
+        <a class="footer__link" href="index.html#popular">Популярное</a>
+        <a class="footer__link" href="index.html#contacts">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#">↑</a>
+</body>
+</html>

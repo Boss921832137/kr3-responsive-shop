@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Пачка кофе ЭФИОПИЯ">
+  <rect width="400" height="300" fill="#f5ebdf"/>
+  <ellipse cx="200" cy="262" rx="110" ry="12" fill="#e5d6c6"/>
+  <path d="M135 70 H265 L280 258 H120 Z" fill="#7a4a2a"/>
+  <rect x="130" y="56" width="140" height="20" rx="4" fill="#3b2416"/>
+  <rect x="152" y="120" width="96" height="80" rx="8" fill="#fffaf4"/>
+  <rect x="152" y="120" width="96" height="18" rx="8" fill="#d9822b"/>
+  <text x="200" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#2b1d14">ЭФИОПИЯ</text>
+  <text x="200" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6b5a4e">250 г</text>
+  <ellipse cx="305" cy="250" rx="13" ry="9" fill="#55311a" transform="rotate(-25 305 250)"/>
+  <ellipse cx="330" cy="256" rx="13" ry="9" fill="#7a4a2a" transform="rotate(15 330 256)"/>
+  <ellipse cx="90" cy="252" rx="13" ry="9" fill="#55311a" transform="rotate(20 90 252)"/>
+</svg>

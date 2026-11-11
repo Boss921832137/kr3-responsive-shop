@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Форма заявки на покупку в магазине Зерно.">
+  <title>Заявка — Зерно</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html">Зерно</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link" href="product.html">Товар</a></li>
+          <li><a class="nav__link nav__link--active" href="order.html">Заявка</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <p class="breadcrumbs"><a href="index.html">Главная</a> / Заявка</p>
+    <h1>Оформление заявки</h1>
+
+    <section>
+      <form class="form" action="#" method="post">
+        <div class="form__field">
+          <label class="form__label" for="name">Имя</label>
+          <input class="form__input" id="name" name="name" type="text" required>
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="email">E-mail</label>
+          <input class="form__input" id="email" name="email" type="email" required>
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="phone">Телефон</label>
+          <input class="form__input" id="phone" name="phone" type="tel" required>
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="product">Товар</label>
+          <select class="form__input" id="product" name="product" required>
+            <option value="">Выберите товар</option>
+            <option value="ethiopia">Кофе Эфиопия</option>
+            <option value="brazil">Кофе Бразилия</option>
+            <option value="colombia">Кофе Колумбия</option>
+            <option value="french-press">Френч-пресс</option>
+            <option value="cezve">Турка</option>
+            <option value="pour-over">Воронка</option>
+          </select>
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="comment">Комментарий</label>
+          <textarea class="form__input" id="comment" name="comment" rows="4"></textarea>
+        </div>
+
+        <div class="form__checkbox">
+          <input id="agree" name="agree" type="checkbox" required>
+          <label for="agree">Согласен на обработку персональных данных</label>
+        </div>
+
+        <button class="button" type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <p>© 2026 Зерно. Телефон: +7 (495) 000-00-00</p>
+      <nav class="footer__nav">
+        <a class="footer__link" href="index.html#advantages">Преимущества</a>
+        <a class="footer__link" href="index.html#popular">Популярное</a>
+        <a class="footer__link" href="index.html#contacts">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#">↑</a>
+</body>
+</html>

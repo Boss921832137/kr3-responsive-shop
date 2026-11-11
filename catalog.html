@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог кофе и аксессуаров магазина Зерно.">
+  <title>Каталог — Зерно</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html">Зерно</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link nav__link--active" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link" href="product.html">Товар</a></li>
+          <li><a class="nav__link" href="order.html">Заявка</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <p class="breadcrumbs"><a href="index.html">Главная</a> / Каталог</p>
+    <h1>Каталог</h1>
+
+    <div class="catalog">
+      <aside class="filter">
+        <h2 class="filter__title">Категории</h2>
+        <ul class="filter__list">
+          <li><a class="filter__link" href="#coffee">Кофе в зёрнах</a></li>
+          <li><a class="filter__link" href="#accessories">Аксессуары</a></li>
+        </ul>
+
+        <h2 class="filter__title">Цена</h2>
+        <label class="filter__option"><input type="checkbox" name="price" value="cheap"> до 1000 ₽</label>
+        <label class="filter__option"><input type="checkbox" name="price" value="expensive"> от 1000 ₽</label>
+        <button class="button" type="button" disabled>Применить</button>
+      </aside>
+
+      <div>
+        <section id="coffee">
+          <h2 class="section__title">Кофе в зёрнах</h2>
+          <div class="products">
+            <article class="product-card">
+              <span class="product-card__badge">Хит</span>
+              <img class="product-card__image" src="images/coffee-ethiopia.svg" alt="Кофе Эфиопия">
+              <h3 class="product-card__title">Эфиопия</h3>
+              <p class="product-card__text">Цветочный вкус с нотами лимона. 250 г.</p>
+              <p class="product-card__price">890 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </article>
+            <article class="product-card">
+              <span class="product-card__badge product-card__badge--sale">Скидка</span>
+              <img class="product-card__image" src="images/coffee-brazil.svg" alt="Кофе Бразилия">
+              <h3 class="product-card__title">Бразилия</h3>
+              <p class="product-card__text">Шоколад и орехи. 250 г.</p>
+              <p class="product-card__price">690 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </article>
+            <article class="product-card">
+              <img class="product-card__image" src="images/coffee-colombia.svg" alt="Кофе Колумбия">
+              <h3 class="product-card__title">Колумбия</h3>
+              <p class="product-card__text">Карамель и яблоко. 250 г.</p>
+              <p class="product-card__price">790 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="accessories">
+          <h2 class="section__title">Аксессуары</h2>
+          <div class="products">
+            <article class="product-card">
+              <span class="product-card__badge product-card__badge--new">Новинка</span>
+              <img class="product-card__image" src="images/french-press.svg" alt="Френч-пресс">
+              <h3 class="product-card__title">Френч-пресс</h3>
+              <p class="product-card__text">Объём 600 мл.</p>
+              <p class="product-card__price">1 490 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </article>
+            <article class="product-card">
+              <img class="product-card__image" src="images/cezve.svg" alt="Турка">
+              <h3 class="product-card__title">Турка</h3>
+              <p class="product-card__text">Медная, 350 мл.</p>
+              <p class="product-card__price">1 190 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </article>
+            <article class="product-card">
+              <img class="product-card__image" src="images/pour-over.svg" alt="Воронка для кофе">
+              <h3 class="product-card__title">Воронка</h3>
+              <p class="product-card__text">Керамическая, на 1–2 чашки.</p>
+              <p class="product-card__price">1 290 ₽</p>
+              <a class="button" href="product.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <p>© 2026 Зерно. Телефон: +7 (495) 000-00-00</p>
+      <nav class="footer__nav">
+        <a class="footer__link" href="index.html#advantages">Преимущества</a>
+        <a class="footer__link" href="index.html#popular">Популярное</a>
+        <a class="footer__link" href="index.html#contacts">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#">↑</a>
+</body>
+</html>

@@ -6,14 +6,18 @@
   <meta name="description" content="Интернет-магазин кофе Зерно.">
   <title>Зерно — магазин кофе</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="header">
     <div class="container header__inner">
       <a class="header__logo" href="index.html">Зерно</a>
-      <nav class="nav">
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav"><span aria-hidden="true">☰</span> Меню</button>
+      <nav class="nav" id="nav" aria-label="Главное меню">
         <ul class="nav__list">
-          <li><a class="nav__link nav__link--active" href="index.html">Главная</a></li>
+          <li><a class="nav__link nav__link--active" href="index.html" aria-current="page">Главная</a></li>
           <li><a class="nav__link" href="catalog.html">Каталог</a></li>
           <li><a class="nav__link" href="product.html">Товар</a></li>
           <li><a class="nav__link" href="order.html">Заявка</a></li>
@@ -23,7 +27,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <div class="container hero__inner">
         <div>
@@ -31,7 +35,13 @@
           <p class="hero__text">Продаём кофе в зёрнах и всё, что нужно для его заваривания.</p>
           <a class="button" href="catalog.html">Перейти в каталог</a>
         </div>
-        <img class="hero__image" src="images/hero.svg" alt="Чашка кофе">
+        <!-- на телефоне показывается обрезанная картинка, на планшете и компьютере — целая -->
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/hero.webp" type="image/webp" width="1200" height="840">
+          <source media="(min-width: 768px)" srcset="images/hero.jpg" width="1200" height="840">
+          <source srcset="images/hero-mobile.webp" type="image/webp">
+          <img class="hero__image" src="images/hero-mobile.jpg" width="640" height="480" alt="Чашка горячего кофе на блюдце">
+        </picture>
       </div>
     </section>
 
@@ -61,44 +71,61 @@
         <div class="products">
           <article class="product-card">
             <span class="product-card__badge">Хит</span>
-            <img class="product-card__image" src="images/coffee-ethiopia.svg" alt="Кофе Эфиопия">
+            <img class="product-card__image"
+                 src="images/coffee-ethiopia-400.jpg"
+                 srcset="images/coffee-ethiopia-400.jpg 400w, images/coffee-ethiopia-800.jpg 800w"
+                 sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                 width="400" height="300" loading="lazy"
+                 alt="Пачка кофе Эфиопия">
             <h3 class="product-card__title">Эфиопия</h3>
             <p class="product-card__text">Кофе в зёрнах, 250 г.</p>
             <p class="product-card__price">890 ₽</p>
-            <a class="button" href="product.html">Подробнее</a>
+            <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Эфиопия»</span></a>
           </article>
           <article class="product-card">
             <span class="product-card__badge product-card__badge--sale">Скидка</span>
-            <img class="product-card__image" src="images/coffee-brazil.svg" alt="Кофе Бразилия">
+            <img class="product-card__image"
+                 src="images/coffee-brazil-400.jpg"
+                 srcset="images/coffee-brazil-400.jpg 400w, images/coffee-brazil-800.jpg 800w"
+                 sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                 width="400" height="300" loading="lazy"
+                 alt="Пачка кофе Бразилия">
             <h3 class="product-card__title">Бразилия</h3>
             <p class="product-card__text">Кофе в зёрнах, 250 г.</p>
             <p class="product-card__price">690 ₽</p>
-            <a class="button" href="product.html">Подробнее</a>
+            <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Бразилия»</span></a>
           </article>
           <article class="product-card">
             <span class="product-card__badge product-card__badge--new">Новинка</span>
-            <img class="product-card__image" src="images/french-press.svg" alt="Френч-пресс">
+            <img class="product-card__image"
+                 src="images/french-press-400.jpg"
+                 srcset="images/french-press-400.jpg 400w, images/french-press-800.jpg 800w"
+                 sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                 width="400" height="300" loading="lazy"
+                 alt="Френч-пресс для заваривания кофе">
             <h3 class="product-card__title">Френч-пресс</h3>
             <p class="product-card__text">Объём 600 мл.</p>
             <p class="product-card__price">1 490 ₽</p>
-            <a class="button" href="product.html">Подробнее</a>
+            <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Френч-пресс»</span></a>
           </article>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer" id="contacts">
+  <footer class="footer">
     <div class="container footer__inner">
-      <p>© 2026 Зерно. Телефон: +7 (495) 000-00-00</p>
-      <nav class="footer__nav">
+      <p>© 2026 Зерно. Телефон: <a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+      <nav class="footer__nav" aria-label="Нижнее меню">
         <a class="footer__link" href="index.html#advantages">Преимущества</a>
         <a class="footer__link" href="index.html#popular">Популярное</a>
-        <a class="footer__link" href="index.html#contacts">Контакты</a>
+        <a class="footer__link" href="contacts.html">Контакты</a>
       </nav>
     </div>
   </footer>
 
-  <a class="to-top" href="#">↑</a>
+  <a class="to-top" href="#" aria-label="Наверх">↑</a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -6,42 +6,46 @@
   <meta name="description" content="Форма заявки на покупку в магазине Зерно.">
   <title>Заявка — Зерно</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="header">
     <div class="container header__inner">
       <a class="header__logo" href="index.html">Зерно</a>
-      <nav class="nav">
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav"><span aria-hidden="true">☰</span> Меню</button>
+      <nav class="nav" id="nav" aria-label="Главное меню">
         <ul class="nav__list">
           <li><a class="nav__link" href="index.html">Главная</a></li>
           <li><a class="nav__link" href="catalog.html">Каталог</a></li>
           <li><a class="nav__link" href="product.html">Товар</a></li>
-          <li><a class="nav__link nav__link--active" href="order.html">Заявка</a></li>
+          <li><a class="nav__link nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
           <li><a class="nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container page">
+  <main class="container page" id="main">
     <p class="breadcrumbs"><a href="index.html">Главная</a> / Заявка</p>
     <h1>Оформление заявки</h1>
 
     <section>
-      <form class="form" action="#" method="post">
+      <form class="form form--order" action="#" method="post">
         <div class="form__field">
           <label class="form__label" for="name">Имя</label>
-          <input class="form__input" id="name" name="name" type="text" required>
+          <input class="form__input" id="name" name="name" type="text" autocomplete="name" required>
         </div>
 
         <div class="form__field">
           <label class="form__label" for="email">E-mail</label>
-          <input class="form__input" id="email" name="email" type="email" required>
+          <input class="form__input" id="email" name="email" type="email" autocomplete="email" required>
         </div>
 
         <div class="form__field">
           <label class="form__label" for="phone">Телефон</label>
-          <input class="form__input" id="phone" name="phone" type="tel" required>
+          <input class="form__input" id="phone" name="phone" type="tel" autocomplete="tel" required>
         </div>
 
         <div class="form__field">
@@ -57,7 +61,7 @@
           </select>
         </div>
 
-        <div class="form__field">
+        <div class="form__field form__field--wide">
           <label class="form__label" for="comment">Комментарий</label>
           <textarea class="form__input" id="comment" name="comment" rows="4"></textarea>
         </div>
@@ -72,17 +76,19 @@
     </section>
   </main>
 
-  <footer class="footer" id="contacts">
+  <footer class="footer">
     <div class="container footer__inner">
-      <p>© 2026 Зерно. Телефон: +7 (495) 000-00-00</p>
-      <nav class="footer__nav">
+      <p>© 2026 Зерно. Телефон: <a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+      <nav class="footer__nav" aria-label="Нижнее меню">
         <a class="footer__link" href="index.html#advantages">Преимущества</a>
         <a class="footer__link" href="index.html#popular">Популярное</a>
-        <a class="footer__link" href="index.html#contacts">Контакты</a>
+        <a class="footer__link" href="contacts.html">Контакты</a>
       </nav>
     </div>
   </footer>
 
-  <a class="to-top" href="#">↑</a>
+  <a class="to-top" href="#" aria-label="Наверх">↑</a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -6,15 +6,19 @@
   <meta name="description" content="Каталог кофе и аксессуаров магазина Зерно.">
   <title>Каталог — Зерно</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
   <header class="header">
     <div class="container header__inner">
       <a class="header__logo" href="index.html">Зерно</a>
-      <nav class="nav">
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav"><span aria-hidden="true">☰</span> Меню</button>
+      <nav class="nav" id="nav" aria-label="Главное меню">
         <ul class="nav__list">
           <li><a class="nav__link" href="index.html">Главная</a></li>
-          <li><a class="nav__link nav__link--active" href="catalog.html">Каталог</a></li>
+          <li><a class="nav__link nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
           <li><a class="nav__link" href="product.html">Товар</a></li>
           <li><a class="nav__link" href="order.html">Заявка</a></li>
           <li><a class="nav__link" href="contacts.html">Контакты</a></li>
@@ -23,7 +27,7 @@
     </div>
   </header>
 
-  <main class="container page">
+  <main class="container page" id="main">
     <p class="breadcrumbs"><a href="index.html">Главная</a> / Каталог</p>
     <h1>Каталог</h1>
 
@@ -35,9 +39,11 @@
           <li><a class="filter__link" href="#accessories">Аксессуары</a></li>
         </ul>
 
-        <h2 class="filter__title">Цена</h2>
-        <label class="filter__option"><input type="checkbox" name="price" value="cheap"> до 1000 ₽</label>
-        <label class="filter__option"><input type="checkbox" name="price" value="expensive"> от 1000 ₽</label>
+        <fieldset class="filter__group">
+          <legend class="filter__title">Цена</legend>
+          <label class="filter__option"><input type="checkbox" name="price" value="cheap"> до 1000 ₽</label>
+          <label class="filter__option"><input type="checkbox" name="price" value="expensive"> от 1000 ₽</label>
+        </fieldset>
         <button class="button" type="button" disabled>Применить</button>
       </aside>
 
@@ -47,26 +53,41 @@
           <div class="products">
             <article class="product-card">
               <span class="product-card__badge">Хит</span>
-              <img class="product-card__image" src="images/coffee-ethiopia.svg" alt="Кофе Эфиопия">
+              <img class="product-card__image"
+                   src="images/coffee-ethiopia-400.jpg"
+                   srcset="images/coffee-ethiopia-400.jpg 400w, images/coffee-ethiopia-800.jpg 800w"
+                   sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                   width="400" height="300"
+                   alt="Пачка кофе Эфиопия">
               <h3 class="product-card__title">Эфиопия</h3>
               <p class="product-card__text">Цветочный вкус с нотами лимона. 250 г.</p>
               <p class="product-card__price">890 ₽</p>
-              <a class="button" href="product.html">Подробнее</a>
+              <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Эфиопия»</span></a>
             </article>
             <article class="product-card">
               <span class="product-card__badge product-card__badge--sale">Скидка</span>
-              <img class="product-card__image" src="images/coffee-brazil.svg" alt="Кофе Бразилия">
+              <img class="product-card__image"
+                   src="images/coffee-brazil-400.jpg"
+                   srcset="images/coffee-brazil-400.jpg 400w, images/coffee-brazil-800.jpg 800w"
+                   sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                   width="400" height="300"
+                   alt="Пачка кофе Бразилия">
               <h3 class="product-card__title">Бразилия</h3>
               <p class="product-card__text">Шоколад и орехи. 250 г.</p>
               <p class="product-card__price">690 ₽</p>
-              <a class="button" href="product.html">Подробнее</a>
+              <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Бразилия»</span></a>
             </article>
             <article class="product-card">
-              <img class="product-card__image" src="images/coffee-colombia.svg" alt="Кофе Колумбия">
+              <img class="product-card__image"
+                   src="images/coffee-colombia-400.jpg"
+                   srcset="images/coffee-colombia-400.jpg 400w, images/coffee-colombia-800.jpg 800w"
+                   sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                   width="400" height="300" loading="lazy"
+                   alt="Пачка кофе Колумбия">
               <h3 class="product-card__title">Колумбия</h3>
               <p class="product-card__text">Карамель и яблоко. 250 г.</p>
               <p class="product-card__price">790 ₽</p>
-              <a class="button" href="product.html">Подробнее</a>
+              <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Колумбия»</span></a>
             </article>
           </div>
         </section>
@@ -76,25 +97,40 @@
           <div class="products">
             <article class="product-card">
               <span class="product-card__badge product-card__badge--new">Новинка</span>
-              <img class="product-card__image" src="images/french-press.svg" alt="Френч-пресс">
+              <img class="product-card__image"
+                   src="images/french-press-400.jpg"
+                   srcset="images/french-press-400.jpg 400w, images/french-press-800.jpg 800w"
+                   sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                   width="400" height="300" loading="lazy"
+                   alt="Френч-пресс для заваривания кофе">
               <h3 class="product-card__title">Френч-пресс</h3>
               <p class="product-card__text">Объём 600 мл.</p>
               <p class="product-card__price">1 490 ₽</p>
-              <a class="button" href="product.html">Подробнее</a>
+              <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Френч-пресс»</span></a>
             </article>
             <article class="product-card">
-              <img class="product-card__image" src="images/cezve.svg" alt="Турка">
+              <img class="product-card__image"
+                   src="images/cezve-400.jpg"
+                   srcset="images/cezve-400.jpg 400w, images/cezve-800.jpg 800w"
+                   sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                   width="400" height="300" loading="lazy"
+                   alt="Медная турка с длинной ручкой">
               <h3 class="product-card__title">Турка</h3>
               <p class="product-card__text">Медная, 350 мл.</p>
               <p class="product-card__price">1 190 ₽</p>
-              <a class="button" href="product.html">Подробнее</a>
+              <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Турка»</span></a>
             </article>
             <article class="product-card">
-              <img class="product-card__image" src="images/pour-over.svg" alt="Воронка для кофе">
+              <img class="product-card__image"
+                   src="images/pour-over-400.jpg"
+                   srcset="images/pour-over-400.jpg 400w, images/pour-over-800.jpg 800w"
+                   sizes="(min-width: 1024px) 330px, (min-width: 576px) 45vw, 90vw"
+                   width="400" height="300" loading="lazy"
+                   alt="Керамическая воронка для заваривания кофе">
               <h3 class="product-card__title">Воронка</h3>
               <p class="product-card__text">Керамическая, на 1–2 чашки.</p>
               <p class="product-card__price">1 290 ₽</p>
-              <a class="button" href="product.html">Подробнее</a>
+              <a class="button" href="product.html">Подробнее<span class="visually-hidden"> о товаре «Воронка»</span></a>
             </article>
           </div>
         </section>
@@ -102,17 +138,19 @@
     </div>
   </main>
 
-  <footer class="footer" id="contacts">
+  <footer class="footer">
     <div class="container footer__inner">
-      <p>© 2026 Зерно. Телефон: +7 (495) 000-00-00</p>
-      <nav class="footer__nav">
+      <p>© 2026 Зерно. Телефон: <a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+      <nav class="footer__nav" aria-label="Нижнее меню">
         <a class="footer__link" href="index.html#advantages">Преимущества</a>
         <a class="footer__link" href="index.html#popular">Популярное</a>
-        <a class="footer__link" href="index.html#contacts">Контакты</a>
+        <a class="footer__link" href="contacts.html">Контакты</a>
       </nav>
     </div>
   </footer>
 
-  <a class="to-top" href="#">↑</a>
+  <a class="to-top" href="#" aria-label="Наверх">↑</a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
